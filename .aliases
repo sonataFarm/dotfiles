@@ -1,0 +1,18 @@
+#!/bin/bash
+
+alias sl="ls"
+alias ls="ls -GFh"
+alias irb="pry"
+alias be="bundle exec"
+alias atomdirs="atom . frontend frontend/components db app/controllers app/models app/views app/assets/stylesheets"
+# make `g` behave like `git status` with no args, or `git` with args
+g () {
+  if [ $# -eq 0 ]
+  then
+    git status
+  else
+    git "$@"
+  fi
+}
+__git_complete g _git
+alias ag='ag --path-to-ignore ~/.ignore'
