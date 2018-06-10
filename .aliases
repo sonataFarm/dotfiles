@@ -16,3 +16,4 @@ g () {
 }
 __git_complete g _git
 alias ag='ag --path-to-ignore ~/.ignore'
+alias src="source ~/.bash_profile"
